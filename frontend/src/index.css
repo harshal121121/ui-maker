@@ -1,0 +1,303 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+:root {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color-scheme: light;
+  background: #f8fafc;
+  color: #111827;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  min-width: 320px;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 14px;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+a:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+::selection {
+  background: #bfdbfe;
+  color: #1e3a8a;
+}
+
+.app-navbar,
+.app-panel,
+.app-toolbar,
+.canvas-page,
+.app-workspace-page {
+  background-color: #ffffff;
+  color: #111827;
+}
+
+.app-navbar,
+.app-panel,
+.app-toolbar,
+.canvas-page,
+.app-sidebar {
+  border-color: #e5e7eb;
+}
+
+.app-canvas {
+  background-color: #f1f5f9;
+}
+
+.canvas-page {
+  min-height: 500px;
+}
+
+.app-sidebar {
+  background-color: #ffffff;
+  color: #1f2937;
+}
+
+.app-sidebar-link {
+  color: #4b5563;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.app-sidebar-link:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.app-component-tile {
+  border-color: #e5e7eb;
+  background-color: #ffffff;
+  color: #1f2937;
+}
+
+.app-component-tile:hover {
+  border-color: #93c5fd;
+  background-color: #eff6ff;
+  transform: translateY(-1px);
+}
+
+.app-chip,
+.app-icon-button,
+.app-secondary-button {
+  border-color: #e5e7eb;
+  background-color: #ffffff;
+  color: #4b5563;
+}
+
+.app-chip:hover,
+.app-icon-button:hover,
+.app-secondary-button:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.canvas-scroll-area {
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+
+.canvas-page {
+  transform-origin: top center;
+}
+
+/* Dark mode */
+[data-theme="dark"] {
+  color-scheme: dark;
+  background: #0b1120;
+  color: #e5e7eb;
+}
+
+[data-theme="dark"] body {
+  background: #0b1120;
+  color: #e5e7eb;
+}
+
+[data-theme="dark"] .app-navbar,
+[data-theme="dark"] .app-panel,
+[data-theme="dark"] .app-toolbar,
+[data-theme="dark"] .canvas-page,
+[data-theme="dark"] .app-workspace-page {
+  background-color: #111827;
+  color: #e5e7eb;
+}
+
+[data-theme="dark"] .app-navbar,
+[data-theme="dark"] .app-panel,
+[data-theme="dark"] .app-toolbar,
+[data-theme="dark"] .canvas-page,
+[data-theme="dark"] .app-sidebar {
+  border-color: #374151;
+}
+
+[data-theme="dark"] .app-canvas {
+  background-color: #0b1120;
+}
+
+[data-theme="dark"] .app-sidebar {
+  background-color: #111827;
+  color: #e5e7eb;
+}
+
+[data-theme="dark"] .app-sidebar-link {
+  color: #d1d5db;
+}
+
+[data-theme="dark"] .app-sidebar-link:hover {
+  background-color: #1f2937;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .app-component-tile {
+  border-color: #374151;
+  background-color: #1f2937;
+  color: #f3f4f6;
+}
+
+[data-theme="dark"] .app-component-tile:hover {
+  border-color: #60a5fa;
+  background-color: #263449;
+}
+
+[data-theme="dark"] .app-chip,
+[data-theme="dark"] .app-icon-button,
+[data-theme="dark"] .app-secondary-button {
+  border-color: #374151;
+  background-color: #1f2937;
+  color: #d1d5db;
+}
+
+[data-theme="dark"] .app-chip:hover,
+[data-theme="dark"] .app-icon-button:hover,
+[data-theme="dark"] .app-secondary-button:hover {
+  background-color: #374151;
+  color: #ffffff;
+}
+
+/* Existing Tailwind utility color overrides */
+[data-theme="dark"] .bg-white {
+  background-color: #111827;
+}
+
+[data-theme="dark"] .bg-gray-50 {
+  background-color: #1f2937;
+}
+
+[data-theme="dark"] .bg-gray-100 {
+  background-color: #0b1120;
+}
+
+[data-theme="dark"] .text-gray-900 {
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .text-gray-800 {
+  color: #f3f4f6;
+}
+
+[data-theme="dark"] .text-gray-700 {
+  color: #e5e7eb;
+}
+
+[data-theme="dark"] .text-gray-600 {
+  color: #d1d5db;
+}
+
+[data-theme="dark"] .text-gray-500,
+[data-theme="dark"] .text-gray-400 {
+  color: #9ca3af;
+}
+
+[data-theme="dark"] .border-gray-100,
+[data-theme="dark"] .border-gray-200,
+[data-theme="dark"] .border-gray-300 {
+  border-color: #374151;
+}
+
+[data-theme="dark"] input:not([type="color"]):not([type="checkbox"]):not([type="range"]),
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+  background-color: #1f2937;
+  color: #f3f4f6;
+}
+
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: #9ca3af;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.app-prompt-dock {
+  background: #ffffff;
+  border-color: #e5e7eb;
+}
+
+.app-prompt-panel {
+  background: #ffffff;
+  color: #111827;
+}
+
+[data-theme="dark"] .app-prompt-dock {
+  background: #111827;
+  border-color: #374151;
+}
+
+[data-theme="dark"] .app-prompt-panel {
+  background: #111827;
+  color: #e5e7eb;
+}
+
+.app-sidebar .border-b,
+.app-sidebar .border-t {
+  border-color: #e5e7eb;
+}
+
+[data-theme="dark"] .app-sidebar .border-b,
+[data-theme="dark"] .app-sidebar .border-t {
+  border-color: #374151;
+}
